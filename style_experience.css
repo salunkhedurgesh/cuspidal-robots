@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Life+Savers&family=Texturina:opsz@12..72&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --title-color:#ccd6f6;
+    /*--halycon: #64ffda;*/
+    --halycon: #00eeb6;
+    --blueBC: #8892b0;
+    --paper_color:#8892b0;
+    --background_color: #03122b;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #03122b;
+    min-height: 100vh;
+    color: white;
+    font-family: Rubik, sans-serif;
+    overflow-x: clip;
+}
+
+.experience p{
+    color: var(--blueBC);
+    font-size: 2rem;
+}
+
+.experience p:hover{
+    cursor: pointer;
+}
+
+.experience{
+    display: flex;
+    background-color: var(--background_color);
+    width: 100vw;
+    position: sticky;
+    top: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--halycon) 1px solid;
+    margin-top: 3rem;
+    z-index: 2;
+}
+
+/*--
+.experience{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr  4fr;
+    background-color: var(--background_color);
+    position: sticky;
+    top: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--halycon) 1px solid;
+    margin-top: 3rem;
+    z-index: 2;
+}
+ */
+
+
+.expDate{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.expTitle{
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media only screen and (min-width: 800px){
+    .experience{
+        width: 100vw;
+        margin-top: 0;
+        border: none;
+    }
+
+    .experience p{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .experience{
+        z-index: 1;
+        width: 100vw;
+        position: sticky;
+        top: 2.5rem;
+        border: none;
+        margin-top: 0;
+    }
+
+    .experience p{
+        font-size: 3rem;
+    }
+}
